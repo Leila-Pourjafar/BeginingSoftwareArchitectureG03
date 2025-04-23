@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.core", "1.core", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.Infra", "2.Infra", "{250B1D53-8DB0-4830-87C1-6A5378B217C4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.Endpoints", "3.Endpoints", "{6FC74BC7-15BB-44EE-9201-ADD26A979824}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HouseRent.Core.Domain", "1.Core\HouseRent.Core.Domain\HouseRent.Core.Domain.csproj", "{0006B328-7FB6-7059-B8CA-0FA0E58BBC4E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HouseRent.Core.ApplicationServices", "1.Core\HouseRent.Core.ApplicationServices\HouseRent.Core.ApplicationServices.csproj", "{723AF7ED-B746-4241-8911-257D4D2A4FAE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0006B328-7FB6-7059-B8CA-0FA0E58BBC4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0006B328-7FB6-7059-B8CA-0FA0E58BBC4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0006B328-7FB6-7059-B8CA-0FA0E58BBC4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0006B328-7FB6-7059-B8CA-0FA0E58BBC4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{723AF7ED-B746-4241-8911-257D4D2A4FAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{723AF7ED-B746-4241-8911-257D4D2A4FAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{723AF7ED-B746-4241-8911-257D4D2A4FAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{723AF7ED-B746-4241-8911-257D4D2A4FAE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0006B328-7FB6-7059-B8CA-0FA0E58BBC4E} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{723AF7ED-B746-4241-8911-257D4D2A4FAE} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7DA461ED-026D-4E9C-8058-0FFF29B991C0}
+	EndGlobalSection
+EndGlobal
