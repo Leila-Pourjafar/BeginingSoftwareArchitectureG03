@@ -15,7 +15,7 @@ public static class ApplicationRegistrer
             c.AddOpenBehavior(typeof(LoggingBehavior<,>));
             c.AddOpenBehavior(typeof(ValidationBehavior<,>));
         });
-        services.AddValidatorsFromAssembly(typeof(ApplicationRegistrer).Assembly);
+        services.55(typeof(ApplicationRegistrer).Assembly);
 
         return services;
     }
