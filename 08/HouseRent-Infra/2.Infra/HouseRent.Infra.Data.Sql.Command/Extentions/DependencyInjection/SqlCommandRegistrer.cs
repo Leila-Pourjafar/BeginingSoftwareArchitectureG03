@@ -1,8 +1,11 @@
 ﻿using HouseRent.Core.ApplicationServices.Contracts;
 using HouseRent.Core.Domain.Bookings;
+using HouseRent.Core.Domain.Bookings.Repositories;
 using HouseRent.Core.Domain.Framework;
 using HouseRent.Core.Domain.Homes;
+using HouseRent.Core.Domain.Homes.Repositories;
 using HouseRent.Core.Domain.Users;
+using HouseRent.Core.Domain.Users.Repositories;
 using HouseRent.Infra.Data.Sql.Command.Bookings;
 using HouseRent.Infra.Data.Sql.Command.ConnectionFactory;
 using HouseRent.Infra.Data.Sql.Command.Homes;
@@ -15,7 +18,7 @@ using Microsoft.Extensions.DependencyInjection;
 namespace HouseRent.Infra.Extentions.DependencyInjection;
 public static class SqlCommandRegistrer
 {
-    public static IServiceCollection RegisterApplicaitonService(this IServiceCollection services, IConfiguration configuration)
+    public static IServiceCollection RegisterDataAccessService(this IServiceCollection services, IConfiguration configuration)
     {
         var connectionString =
                     configuration.GetConnectionString("CnnString") ??

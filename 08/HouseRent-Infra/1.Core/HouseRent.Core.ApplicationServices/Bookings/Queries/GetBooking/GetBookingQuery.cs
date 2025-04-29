@@ -2,4 +2,4 @@
 
 namespace HouseRent.Core.ApplicationServices.Bookings.Queries.GetBooking;
 
-public sealed record GetBookingQuery(int BookingId) : IQuery<BookingResponse>;
+public sealed record GetBookingQuery(long BookingId) : IQuery<BookingResponse>;

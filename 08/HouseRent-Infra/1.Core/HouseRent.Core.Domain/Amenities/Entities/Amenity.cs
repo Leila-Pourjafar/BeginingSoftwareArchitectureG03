@@ -4,7 +4,7 @@ using HouseRent.Core.Domain.Shared.ValueObjects;
 
 namespace HouseRent.Core.Domain.Amenities.Entities
 {
-    public sealed class Amenity:BaseEntity<int>
+    public sealed class Amenity: AggregateRoot<long>
     {
         private Amenity(int id,
                         Title title,

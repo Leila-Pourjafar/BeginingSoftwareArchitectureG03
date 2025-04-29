@@ -7,7 +7,7 @@ namespace HouseRent.Core.Domain.Bookings.Repositories;
 
 public interface IBookingRepository
 {
-    Task<Booking?> GetByIdAsync(int id, CancellationToken cancellationToken = default);
+    Task<Booking?> GetByIdAsync(long id, CancellationToken cancellationToken = default);
 
     Task<bool> IsOverlappingAsync(
         Home home,

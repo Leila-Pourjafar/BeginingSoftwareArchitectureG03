@@ -5,7 +5,7 @@ using HouseRent.Core.Domain.Shared.ValueObjects;
 
 namespace HouseRent.Core.Domain.Homes.Entities
 {
-    public sealed class Home:BaseEntity<int>
+    public sealed class Home: AggregateRoot<long>
     {
         private Home(
             int id,

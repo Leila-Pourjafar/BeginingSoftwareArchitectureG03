@@ -1,6 +1,8 @@
 ﻿using HouseRent.Core.Domain.Amenities;
+using HouseRent.Core.Domain.Amenities.Entities;
 using HouseRent.Core.Domain.Homes;
 using HouseRent.Core.Domain.Shared;
+using HouseRent.Core.Domain.Shared.ValueObjects;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;

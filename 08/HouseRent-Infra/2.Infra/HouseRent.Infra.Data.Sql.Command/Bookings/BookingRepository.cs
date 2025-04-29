@@ -1,5 +1,9 @@
 ﻿using HouseRent.Core.Domain.Bookings;
+using HouseRent.Core.Domain.Bookings.Entities;
+using HouseRent.Core.Domain.Bookings.Repositories;
+using HouseRent.Core.Domain.Bookings.ValueObjects;
 using HouseRent.Core.Domain.Homes;
+using HouseRent.Core.Domain.Homes.Entities;
 using HouseRent.Infra.Data.Sql.Command.Framework;
 using HouseRent.Infra.Data.Sql.Command.Shared;
 using Microsoft.EntityFrameworkCore;
@@ -15,6 +19,11 @@ internal sealed class BookingRepository(HouseRentDbContext dbContext) :
         BookingStatus.Confirmed,
         BookingStatus.Completed
     };
+
+    public Task AddAsync(Booking booking, CancellationToken cancellationToken = default)
+    {
+        throw new NotImplementedException();
+    }
 
     public async Task<bool> IsOverlappingAsync(
         Home home,

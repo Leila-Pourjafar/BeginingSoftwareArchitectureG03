@@ -5,6 +5,6 @@ namespace HouseRent.Core.Domain.Homes.Repositories
 
     public interface IHomeRepository
     {
-        Task<Home?> GetByIdAsync(int id, CancellationToken cancellationToken = default);
+        Task<Home?> GetByIdAsync(long id, CancellationToken cancellationToken = default);
     }
 }

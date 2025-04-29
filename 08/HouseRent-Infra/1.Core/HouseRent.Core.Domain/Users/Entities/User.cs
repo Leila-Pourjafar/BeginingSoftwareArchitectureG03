@@ -4,9 +4,9 @@ using HouseRent.Core.Domain.Users.ValueObjects;
 
 namespace HouseRent.Core.Domain.Users.Entities
 {
-    public sealed class User:BaseEntity<int>
+    public sealed class User: AggregateRoot<long>
     {
-        private User(int id,
+        private User(long id,
                      FirstName firstName,
                      LastName lastName,
                      Email email)

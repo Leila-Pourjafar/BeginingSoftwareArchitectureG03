@@ -7,12 +7,12 @@ using HouseRent.Core.Domain.Shared.ValueObjects;
 
 namespace HouseRent.Core.Domain.Bookings.Entities
 {
-    public sealed class Booking : BaseEntity<int>
+    public sealed class Booking : AggregateRoot<long>
     {
         private Booking(
-                int id,
-                int homeId,
-                int userId,
+                long id,
+                long homeId,
+                long userId,
                 DateRange duration,
                 Money priceForPeriod,
                 Money amenitiesUpCharge,
@@ -29,9 +29,9 @@ namespace HouseRent.Core.Domain.Bookings.Entities
             CreatedOnUtc = createdOnUtc;
         }
 
-        public int HomeId { get; private set; }
+        public long HomeId { get; private set; }
 
-        public int UserId { get; private set; }
+        public long UserId { get; private set; }
 
         public DateRange Duration { get; private set; }
 
@@ -50,9 +50,9 @@ namespace HouseRent.Core.Domain.Bookings.Entities
         public DateTime? GuestStatusOnUtc { get; private set; }
 
         //گفتگو در مورد ارسال Home یا HomeId
-        public static Booking Reserve(int id,
+        public static Booking Reserve(long id,
         Home home,
-        int userId,
+        long userId,
         DateRange duration,
         DateTime utcNow,
         PricingService pricingService)

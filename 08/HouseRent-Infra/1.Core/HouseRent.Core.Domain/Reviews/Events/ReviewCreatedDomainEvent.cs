@@ -2,4 +2,4 @@
 
 namespace HouseRent.Core.Domain.Reviews;
 
-public sealed record ReviewCreatedDomainEvent(int ReviewId) : IDomainEvent;
+public sealed record ReviewCreatedDomainEvent(long ReviewId) : IDomainEvent;

@@ -2,4 +2,4 @@
 
 namespace HouseRent.Core.Domain.Users.Events;
 
-public sealed record UserCreatedDomainEvent(int UserId) : IDomainEvent;
+public sealed record UserCreatedDomainEvent(long UserId) : IDomainEvent;

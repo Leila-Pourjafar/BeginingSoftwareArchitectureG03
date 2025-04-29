@@ -1,4 +1,6 @@
 ﻿using HouseRent.Core.Domain.Users;
+using HouseRent.Core.Domain.Users.Entities;
+using HouseRent.Core.Domain.Users.ValueObjects;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -22,7 +24,7 @@ internal sealed class UserConfiguration : IEntityTypeConfiguration<User>
 
         builder.Property(user => user.Email)
             .HasMaxLength(100)
-            .HasConversion(email => email.Value, value => new Core.Domain.Users.Email(value)); ;
+            .HasConversion(email => email.Value, value => new Email(value)); ;
 
         builder.HasIndex(user => user.Email).IsUnique();
     }

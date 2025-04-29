@@ -15,6 +15,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HouseRent.Core.ApplicationS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HouseRent.Infra.SimpleDateTime", "2.Infra\HouseRent.Infra.SimpleDateTime\HouseRent.Infra.SimpleDateTime.csproj", "{FF5FA5AA-E70A-490E-86C7-BD7D37494DB6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HouseRent.Infra.SimpleEmail", "2.Infra\HouseRent.Infra.SimpleEmail\HouseRent.Infra.SimpleEmail.csproj", "{036326E0-5034-4DEE-9FFB-79E225C0820D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HouseRent.Infra.SnowflakeIdGenerators", "2.Infra\HouseRent.Infra.SnowflakeIdGenerators\HouseRent.Infra.SnowflakeIdGenerators.csproj", "{C0D7EBF6-D5AE-4DB6-9E69-8DF4DC6D8B1C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HouseRent.Infra.Data.Sql.Command", "2.Infra\HouseRent.Infra.Data.Sql.Command\HouseRent.Infra.Data.Sql.Command.csproj", "{B7B72FDB-AE67-46BE-9AF5-298E44F98F36}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HouseRent.Endpoints.RestAPI", "3.Endpoints\HouseRent.Endpoints.RestAPI\HouseRent.Endpoints.RestAPI.csproj", "{D02C58F6-48F4-43D4-A3F7-EE4554ACA13F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +41,22 @@ Global
 		{FF5FA5AA-E70A-490E-86C7-BD7D37494DB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FF5FA5AA-E70A-490E-86C7-BD7D37494DB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FF5FA5AA-E70A-490E-86C7-BD7D37494DB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{036326E0-5034-4DEE-9FFB-79E225C0820D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{036326E0-5034-4DEE-9FFB-79E225C0820D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{036326E0-5034-4DEE-9FFB-79E225C0820D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{036326E0-5034-4DEE-9FFB-79E225C0820D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0D7EBF6-D5AE-4DB6-9E69-8DF4DC6D8B1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0D7EBF6-D5AE-4DB6-9E69-8DF4DC6D8B1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0D7EBF6-D5AE-4DB6-9E69-8DF4DC6D8B1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0D7EBF6-D5AE-4DB6-9E69-8DF4DC6D8B1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7B72FDB-AE67-46BE-9AF5-298E44F98F36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7B72FDB-AE67-46BE-9AF5-298E44F98F36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7B72FDB-AE67-46BE-9AF5-298E44F98F36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7B72FDB-AE67-46BE-9AF5-298E44F98F36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D02C58F6-48F4-43D4-A3F7-EE4554ACA13F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D02C58F6-48F4-43D4-A3F7-EE4554ACA13F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D02C58F6-48F4-43D4-A3F7-EE4554ACA13F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D02C58F6-48F4-43D4-A3F7-EE4554ACA13F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -41,6 +65,10 @@ Global
 		{0006B328-7FB6-7059-B8CA-0FA0E58BBC4E} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{723AF7ED-B746-4241-8911-257D4D2A4FAE} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{FF5FA5AA-E70A-490E-86C7-BD7D37494DB6} = {250B1D53-8DB0-4830-87C1-6A5378B217C4}
+		{036326E0-5034-4DEE-9FFB-79E225C0820D} = {250B1D53-8DB0-4830-87C1-6A5378B217C4}
+		{C0D7EBF6-D5AE-4DB6-9E69-8DF4DC6D8B1C} = {250B1D53-8DB0-4830-87C1-6A5378B217C4}
+		{B7B72FDB-AE67-46BE-9AF5-298E44F98F36} = {250B1D53-8DB0-4830-87C1-6A5378B217C4}
+		{D02C58F6-48F4-43D4-A3F7-EE4554ACA13F} = {6FC74BC7-15BB-44EE-9201-ADD26A979824}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7DA461ED-026D-4E9C-8058-0FFF29B991C0}

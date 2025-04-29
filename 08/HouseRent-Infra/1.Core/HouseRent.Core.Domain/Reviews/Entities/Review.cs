@@ -3,13 +3,13 @@ using HouseRent.Core.Domain.Framework;
 
 namespace HouseRent.Core.Domain.Reviews;
 
-public sealed class Review : BaseEntity<int>
+public sealed class Review : AggregateRoot<long>
 {
     private Review(
-        int id,
-        int homeId,
-        int bookingId,
-        int userId,
+        long id,
+        long homeId,
+        long bookingId,
+        long userId,
         Rating rating,
         Comment comment,
         DateTime createdOnUtc)
@@ -23,11 +23,11 @@ public sealed class Review : BaseEntity<int>
         CreatedOnUtc = createdOnUtc;
     }
 
-    public int HomeId { get; private set; }
+    public long HomeId { get; private set; }
 
-    public int BookingId { get; private set; }
+    public long BookingId { get; private set; }
 
-    public int UserId { get; private set; }
+    public long UserId { get; private set; }
 
     public Rating Rating { get; private set; }
 
@@ -36,7 +36,7 @@ public sealed class Review : BaseEntity<int>
     public DateTime CreatedOnUtc { get; private set; }
 
     public static Result<Review> Create(
-        int id,
+        long id,
         Booking booking,
         Rating rating,
         Comment comment,

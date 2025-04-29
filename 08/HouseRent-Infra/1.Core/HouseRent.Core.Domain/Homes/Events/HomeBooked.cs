@@ -2,5 +2,5 @@
 
 namespace HouseRent.Core.Domain.Homes.Events
 {
-    public record HomeBooked(int HomeId) : IDomainEvent;
+    public record HomeBooked(long HomeId) : IDomainEvent;
 }

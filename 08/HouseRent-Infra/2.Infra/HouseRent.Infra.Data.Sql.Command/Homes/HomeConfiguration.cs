@@ -1,4 +1,7 @@
 ﻿using HouseRent.Core.Domain.Homes;
+using HouseRent.Core.Domain.Homes.Entities;
+using HouseRent.Core.Domain.Homes.ValueObjects;
+using HouseRent.Core.Domain.Shared.ValueObjects;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -21,7 +24,7 @@ internal sealed class HomeConfiguration : IEntityTypeConfiguration<Home>
         builder.Property(home => home.Description)
             .HasConversion(description => description.Value, value => new Description(value));
         builder.Property(home => home.Price)
-            .HasConversion(price => price.Amount, value => new Core.Domain.Shared.Money(value));
+            .HasConversion(price => price.Amount, value => new Money(value));
 
 
         builder.Property<uint>("Version").IsRowVersion();

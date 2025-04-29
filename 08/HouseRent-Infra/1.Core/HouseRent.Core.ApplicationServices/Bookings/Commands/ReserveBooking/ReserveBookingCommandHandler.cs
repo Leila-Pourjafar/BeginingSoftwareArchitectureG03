@@ -14,10 +14,10 @@ using HouseRent.Core.Domain.Users.Repositories;
 
 namespace HouseRent.Core.ApplicationServices.Bookings.Commands.ReserveBooking;
 
-internal sealed class ReserveBookingCommandHandler : ICommandHandler<ReserveBookingCommand, int>
+internal sealed class ReserveBookingCommandHandler : ICommandHandler<ReserveBookingCommand, long>
 {
     #region private fields
-    private readonly IdGenerator _idGenerator;
+    private readonly IIdGenerator<long> _idGenerator;
     private readonly IUserRepository _userRepository;
     private readonly IHomeRepository _homeRepository;
     private readonly IBookingRepository _bookingRepository;
@@ -28,7 +28,7 @@ internal sealed class ReserveBookingCommandHandler : ICommandHandler<ReserveBook
 
     #region Constructors
     public ReserveBookingCommandHandler(
-        IdGenerator idGenerator,
+        IIdGenerator<long> idGenerator,
         IUserRepository userRepository,
         IHomeRepository homeRepository,
         IBookingRepository bookingRepository,
@@ -46,20 +46,20 @@ internal sealed class ReserveBookingCommandHandler : ICommandHandler<ReserveBook
     }
     #endregion
 
-    public async Task<Result<int>> Handle(ReserveBookingCommand request, CancellationToken cancellationToken)
+    public async Task<Result<long>> Handle(ReserveBookingCommand request, CancellationToken cancellationToken)
     {
         var user = await _userRepository.GetByIdAsync(request.UserId, cancellationToken);
 
         if (user is null)
         {
-            return Result.Failure<int>(UserErrors.NotFound);
+            return Result.Failure<long>(UserErrors.NotFound);
         }
 
         var home = await _homeRepository.GetByIdAsync(request.HomeId, cancellationToken);
 
         if (home is null)
         {
-            return Result.Failure<int>(HomeErrors.NotFound);
+            return Result.Failure<long>(HomeErrors.NotFound);
         }
 
         var duration = DateRange.Create(request.StartDate, request.EndDate);
@@ -67,7 +67,7 @@ internal sealed class ReserveBookingCommandHandler : ICommandHandler<ReserveBook
 
         if (await _bookingRepository.IsOverlappingAsync(home, duration, cancellationToken))
         {
-            return Result.Failure<int>(BookingErrors.Overlap);
+            return Result.Failure<long>(BookingErrors.Overlap);
         }
 
 

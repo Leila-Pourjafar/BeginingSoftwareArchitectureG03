@@ -5,7 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 namespace HouseRent.Infra.Extentions.DependencyInjection;
 public static class SimpleDateTimeRegistrer
 {
-    public static IServiceCollection RegisterApplicaitonService(this IServiceCollection services)
+    public static IServiceCollection RegisterSimpleDateTimeService(this IServiceCollection services)
     {
         services.AddTransient<IDateTimeProvider, DateTimeProvider>();
         return services;

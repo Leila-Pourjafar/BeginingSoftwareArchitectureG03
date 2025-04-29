@@ -1,4 +1,6 @@
 ﻿using HouseRent.Core.Domain.Users;
+using HouseRent.Core.Domain.Users.Entities;
+using HouseRent.Core.Domain.Users.Repositories;
 using HouseRent.Infra.Data.Sql.Command.Framework;
 using HouseRent.Infra.Data.Sql.Command.Shared;
 

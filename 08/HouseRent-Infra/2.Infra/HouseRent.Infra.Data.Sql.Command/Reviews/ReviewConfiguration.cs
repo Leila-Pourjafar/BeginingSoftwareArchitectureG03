@@ -1,7 +1,10 @@
 ﻿using HouseRent.Core.Domain.Bookings;
+using HouseRent.Core.Domain.Bookings.Entities;
 using HouseRent.Core.Domain.Homes;
+using HouseRent.Core.Domain.Homes.Entities;
 using HouseRent.Core.Domain.Reviews;
 using HouseRent.Core.Domain.Users;
+using HouseRent.Core.Domain.Users.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 

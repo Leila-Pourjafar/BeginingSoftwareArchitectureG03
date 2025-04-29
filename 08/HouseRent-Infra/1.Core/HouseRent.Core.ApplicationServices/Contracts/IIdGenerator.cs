@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace HouseRent.Core.ApplicationServices.Contracts;
-public interface IdGenerator
+public interface IIdGenerator<T>
 {
-    int GetId();
+    T GetId();
 }

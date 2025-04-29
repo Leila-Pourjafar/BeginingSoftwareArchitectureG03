@@ -1,8 +1,12 @@
 ﻿using HouseRent.Core.Domain.Amenities;
+using HouseRent.Core.Domain.Amenities.Entities;
 using HouseRent.Core.Domain.Bookings;
+using HouseRent.Core.Domain.Bookings.Entities;
 using HouseRent.Core.Domain.Framework;
 using HouseRent.Core.Domain.Homes;
+using HouseRent.Core.Domain.Homes.Entities;
 using HouseRent.Core.Domain.Users;
+using HouseRent.Core.Domain.Users.Entities;
 using HouseRent.Infra.Data.Sql.Command.Framework;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
