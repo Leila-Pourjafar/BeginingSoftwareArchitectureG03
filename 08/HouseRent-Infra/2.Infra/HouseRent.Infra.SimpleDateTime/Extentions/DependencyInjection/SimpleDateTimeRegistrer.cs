@@ -7,7 +7,7 @@ public static class SimpleDateTimeRegistrer
 {
     public static IServiceCollection RegisterSimpleDateTimeService(this IServiceCollection services)
     {
-        services.AddTransient<IDateTimeProvider, DateTimeProvider>();
+        services.AddSingleton<IDateTimeProvider, DateTimeProvider>();
         return services;
     }
 }
